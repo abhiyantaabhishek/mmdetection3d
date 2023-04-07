@@ -1,0 +1,1 @@
+./dist_train.sh "/raid/cs21resch15003/cs22mds15010/mmdet/mmdetection3d/mywork/config/mvxnet_fpn_dv_second_secfpn_8xb2-80e_kitti-3d-3class.py" "2"
