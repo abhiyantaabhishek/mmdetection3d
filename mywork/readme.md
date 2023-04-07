@@ -48,3 +48,14 @@ load 469 Misc database infos
 load 2218 Pedestrian database infos
 load 540 Truck database infos
 load 92 Person_sitting database infos
+
+
+
+git config --global user.email "abhiyantaabhishek1@gmail.com"
+git config --global user.name "Abhishek"
+
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:abhiyantaabhishek/mmdetection3d.git
+git push -u origin main
