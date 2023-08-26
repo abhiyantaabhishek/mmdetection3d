@@ -2,6 +2,7 @@
 
 ## Older process to set mmdetection (2021)
 
+```bash
 conda deactivate
 conda env remove --name abhi
 conda create --name abhi python=3.7 -y
@@ -28,9 +29,11 @@ python demo/pcd_demo.py demo/data/kitti/000008.bin configs/second/second_hv_secf
 
 python demo/pcd_demo.py demo/data/kitti/000008.bin configs/second/second_hv_secfpn_8xb6-80e_kitti-3d-car.py checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car_20200620_230238-393f000c.pth
 wget 
-
+```
 
 ## newer process (2023)
+
+```bash
  export CUDA_HOME=$CONDA_PREFIX
  mkdir mmdetection3d
  cd mmdetection3d/
@@ -50,10 +53,11 @@ sudo add-apt-repository ppa:kisak/kisak-mesa
 sudo apt-get update
 (wsl --shutdown and restart)
 glxinfo | grep ":" 
-
+```
 
 ## tensorflow (2023)
 
+```bash
 conda install -c conda-forge cudatoolkit=11.8.0
 python3 -m pip install nvidia-cudnn-cu11==8.6.0.163 tensorflow==2.13.*
 mkdir -p $CONDA_PREFIX/etc/conda/activate.d
@@ -62,3 +66,4 @@ echo 'export LD_LIBRARY_PATH=$CUDNN_PATH/lib:$CONDA_PREFIX/lib/:$LD_LIBRARY_PATH
 source $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 # Verify install:
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+```
