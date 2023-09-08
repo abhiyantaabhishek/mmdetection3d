@@ -59,9 +59,13 @@ glxinfo | grep ":"
 ``` bash
 pip uninstall numpy
 pip install numpy==1.21.1
-conda install -c senyan.dev cudatoolkit-dev    # 11.8
+conda install -c senyan.dev cudatoolkit-dev    # 11.8  OR conda install -c anaconda cudatoolkit=11.8.0 if nvcc is not required
 export CUDA_HOME=$CONDA_PREFIX
-
+mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+cd $CONDA_PREFIX/etc/conda/activate.d
+vi env_vars.sh
+export CUDA_HOME=$CONDA_PREFIX
+Esc:wq
 ```
 
 ## tensorflow (2023)
