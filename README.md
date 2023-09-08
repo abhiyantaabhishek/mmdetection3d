@@ -49,10 +49,19 @@ wget
  mim install "mmdet3d>=1.1.0"
 
 
-sudo add-apt-repository ppa:kisak/kisak-mesa
+sudo add-apt-repository ppa:kisak/kisak-mesa  # required only for wsl 
 sudo apt-get update
 (wsl --shutdown and restart)
 glxinfo | grep ":" 
+```
+
+### fix 
+``` bash
+pip uninstall numpy
+pip install numpy==1.21.1
+conda install -c senyan.dev cudatoolkit-dev    # 11.8
+export CUDA_HOME=$CONDA_PREFIX
+
 ```
 
 ## tensorflow (2023)
